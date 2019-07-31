@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1073073606331",
+    "firebase_url": "https://mycashier-27472.firebaseio.com",
+    "project_id": "mycashier-27472",
+    "storage_bucket": "mycashier-27472.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1073073606331:android:2b1da21039035bd6",
+        "android_client_info": {
+          "package_name": "com.fg.mycashier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1073073606331-dar0och21o5dgk3ilq6gugdr9493rnsl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fg.mycashier",
+            "certificate_hash": "889a15af342c18a1923cc21487d0516eb7cca396"
+          }
+        },
+        {
+          "client_id": "1073073606331-hukl94n0g73sdrofsud62a1ck10vcbvg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVlT2QpBPFiUPjRuXbHlB8irQDL28waEA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1073073606331-hukl94n0g73sdrofsud62a1ck10vcbvg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
