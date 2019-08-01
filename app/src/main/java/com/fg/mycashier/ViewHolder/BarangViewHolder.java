@@ -12,7 +12,7 @@ import com.fg.mycashier.R;
 
 public class BarangViewHolder  extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView namaBarang;
+    public TextView nmBarang;
     public ImageView imgBarang;
     private ItemClickListener itemClickListener;
 
@@ -22,7 +22,7 @@ public class BarangViewHolder  extends RecyclerView.ViewHolder implements View.O
 
     public BarangViewHolder(@NonNull View itemView) {
         super(itemView);
-        namaBarang = (TextView)itemView.findViewById(R.id.barangNama);
+        nmBarang = (TextView)itemView.findViewById(R.id.barangNama);
         imgBarang = (ImageView)itemView.findViewById(R.id.barangImage);
 
         itemView.setOnClickListener(this);

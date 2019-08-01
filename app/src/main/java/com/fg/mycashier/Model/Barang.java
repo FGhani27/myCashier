@@ -1,13 +1,13 @@
 package com.fg.mycashier.Model;
 
 public class Barang {
-    private String Nama, Image, Description, Price, Discount, MenuId;
+    private String Name, Image, Description, Price, Discount, MenuId;
 
     public Barang() {
     }
 
-    public Barang(String nama, String image, String description, String price, String discount, String menuId) {
-        Nama = nama;
+    public Barang(String name, String image, String description, String price, String discount, String menuId) {
+        Name = name;
         Image = image;
         Description = description;
         Price = price;
@@ -15,12 +15,12 @@ public class Barang {
         MenuId = menuId;
     }
 
-    public String getNama() {
-        return Nama;
+    public String getName() {
+        return Name;
     }
 
-    public void setNama(String nama) {
-        Nama = nama;
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getImage() {

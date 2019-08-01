@@ -58,13 +58,14 @@ public class BarangActivity extends AppCompatActivity {
         {
             @Override
             protected void populateViewHolder(BarangViewHolder viewHolder, Barang model, int position) {
-                viewHolder.namaBarang.setText(model.getNama());
+                viewHolder.nmBarang.setText(model.getName());
                 Picasso.with(getBaseContext()).load(model.getImage()).into(viewHolder.imgBarang);
                 final Barang local = model;
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         Intent barangDetail = new Intent(BarangActivity.this,BarangDetailActivity.class);
+                        Log.d("TAG",""+adapter.getItemCount());
                          barangDetail.putExtra("BarangId", adapter.getRef(position).getKey());
                          startActivity(barangDetail);
                     }
@@ -73,7 +74,7 @@ public class BarangActivity extends AppCompatActivity {
             }
 
        };
-        Log.d("TAG",""+adapter.getItemCount());
+
         rv.setAdapter(adapter);
     }
 }

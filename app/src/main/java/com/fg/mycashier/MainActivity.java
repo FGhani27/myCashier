@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
+        // Logo by Kanva.com
     private Button btnLogin,btnSign;
     TextView tSlogan;
 

@@ -18,7 +18,9 @@
             android:layout_height="200dp"
             android:src="@drawable/logo"
             android:layout_gravity="center"
+
             />
+
 
         <TextView
             android:id="@+id/txtSlogan"

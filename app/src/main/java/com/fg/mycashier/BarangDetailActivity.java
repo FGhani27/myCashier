@@ -5,6 +5,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,6 +30,7 @@ public class BarangDetailActivity extends AppCompatActivity {
 
     FirebaseDatabase db;
     DatabaseReference detail;
+    Barang loadBarang;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,9 @@ public class BarangDetailActivity extends AppCompatActivity {
         db = FirebaseDatabase.getInstance();
         detail = db.getReference("Foods");
 
-        numberButton = (ElegantNumberButton) findViewById(R.id.number_counter);
+
+        numberButton = findViewById(R.id.number_button);
+
         btnCart = (FloatingActionButton) findViewById(R.id.btnCart);
         namaBrg = (TextView)findViewById(R.id.namaBarang);
         hargaBrg = (TextView)findViewById(R.id.hargaBarang);
@@ -61,12 +65,13 @@ public class BarangDetailActivity extends AppCompatActivity {
         detail.child(BarangId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Barang brg = dataSnapshot.getValue(Barang.class);
-                Picasso.with(getBaseContext()).load(brg.getImage()).into(imgBrg);
-                namaBrg.setText(brg.getNama());
-                hargaBrg.setText(brg.getPrice());
-                descBrg.setText(brg.getDescription());
-                collapsingToolbarLayout.setTitle(brg.getNama());
+
+               loadBarang = dataSnapshot.getValue(Barang.class);
+                Picasso.with(getBaseContext()).load(loadBarang.getImage()).into(imgBrg);
+                namaBrg.setText(loadBarang.getName());
+                hargaBrg.setText(loadBarang.getPrice());
+                descBrg.setText(loadBarang.getDescription());
+                collapsingToolbarLayout.setTitle(loadBarang.getName());
             }
 
             @Override

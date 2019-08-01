@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                         else
                         {
                             mDialog.dismiss();
-                            User user = new User(edName.getText().toString(),edPass.getText().toString());
+                            User user = new User(edName.getText().toString(),edPass.getText().toString(),edPhone.getText().toString());
                             tb.child(edPhone.getText().toString()).setValue(user);
                             Toast.makeText(RegisterActivity.this, edPhone.getText()+" Register Successful", Toast.LENGTH_SHORT).show();
                             finish();
